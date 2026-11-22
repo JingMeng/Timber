@@ -19,7 +19,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.v8.renderscript.RenderScript;
+import android.renderscript.RenderScript;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -128,9 +128,9 @@ public class ImageUtils {
         ByteArrayInputStream bis = new ByteArrayInputStream(imageInByte);
         Bitmap blurTemplate = BitmapFactory.decodeStream(bis, null, options);
 
-        final android.support.v8.renderscript.Allocation input = android.support.v8.renderscript.Allocation.createFromBitmap(rs, blurTemplate);
-        final android.support.v8.renderscript.Allocation output = android.support.v8.renderscript.Allocation.createTyped(rs, input.getType());
-        final android.support.v8.renderscript.ScriptIntrinsicBlur script = android.support.v8.renderscript.ScriptIntrinsicBlur.create(rs, android.support.v8.renderscript.Element.U8_4(rs));
+        final android.renderscript.Allocation input = android.renderscript.Allocation.createFromBitmap(rs, blurTemplate);
+        final android.renderscript.Allocation output = android.renderscript.Allocation.createTyped(rs, input.getType());
+        final android.renderscript.ScriptIntrinsicBlur script = android.renderscript.ScriptIntrinsicBlur.create(rs, android.renderscript.Element.U8_4(rs));
         script.setRadius(8f);
         script.setInput(input);
         script.forEach(output);

@@ -1,6 +1,6 @@
 package com.naman14.timber.utils;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -103,3 +103,4 @@ public class SlideTrackSwitcher implements View.OnTouchListener {
 
     }
 }
+

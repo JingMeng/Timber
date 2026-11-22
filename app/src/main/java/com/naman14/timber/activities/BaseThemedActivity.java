@@ -2,7 +2,7 @@ package com.naman14.timber.activities;
 
 import android.media.AudioManager;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.afollestad.appthemeengine.ATEActivity;
 import com.naman14.timber.utils.Helpers;
@@ -25,3 +25,4 @@ public class BaseThemedActivity extends ATEActivity {
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
     }
 }
+

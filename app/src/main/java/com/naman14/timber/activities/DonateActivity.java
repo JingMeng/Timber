@@ -3,7 +3,7 @@ package com.naman14.timber.activities;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -220,3 +220,4 @@ public class DonateActivity extends BaseThemedActivity implements BillingProcess
     }
 
 }
+
